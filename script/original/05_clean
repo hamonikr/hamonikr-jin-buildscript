@@ -1,0 +1,26 @@
+#!/bin/bash
+# 
+# Date : 2020.09.22
+# 목적 : HamoniKR 3.1 빌드전 clean
+#
+
+export chroot_workpath='/deb'
+export chroot_after_rss='/deb/install_after'
+
+sudo dpkg --configure -a ; \
+sudo apt autoremove ; \
+sudo apt-get install -f
+sudo apt-mark hold mint-artwork mintwelcome ubiquity-slideshow-mint ubuntu-system-adjustments
+
+# copy files after install
+sudo cp -r $chroot_after_rss/* /
+
+# update n clean
+sudo apt-get update
+sudo apt-get clean
+
+
+# delete resource directory
+sudo rm -rf /script
+sudo rm -rf /deb
+sudo rm -rf /edit
