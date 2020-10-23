@@ -20,7 +20,3 @@
 - 대용량 파일의 커밋 방지
 - ln -s check_added_large_files.py .git/hooks/pre-commit.py 심볼릭 링크 생성
 
-## release
-- 2020.10.05 first commit
-- 2020.10.05 add jin repository
-

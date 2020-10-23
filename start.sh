@@ -70,10 +70,7 @@ sudo umount mnt
 # 리소스 복사
 sudo cp -r $WORK_PATH/resource/* $WORK_PATH/custom-img/
 sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
-sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
-
-sudo sh $WORK_PATH/script/original/01_casper
-
+#sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
 echo "###### chroot start ######"
 # chroot 사용하기 전 설정 (Prepare and chroot)
@@ -97,6 +94,8 @@ ln -s /bin/true /sbin/initctl
 
 $(
 echo 'echo "###### program install start ######"'
+echo "sh /script/original/01_system-install"
+echo "sh /script/original/02_package-install"
 echo "sh /script/original/05_clean"
 echo 'echo "###### program install end ######"'
 )

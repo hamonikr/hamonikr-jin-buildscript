@@ -1,0 +1,22 @@
+#!/bin/bash
+# 
+# Date : 2020.10.20
+# 목적 : HamoniKR 4.0 불필요한 패키지 제거
+
+echo "\033[31m"'### celluloid 제거 ###'"\033[0m"
+sudo apt-get -y --purge remove celluloid
+
+echo "\033[31m"'### drawing 제거 ###'"\033[0m"
+sudo apt-get -y --purge remove drawing
+
+echo "\033[31m"'### hexchat 제거 ###'"\033[0m"
+sudo apt-get -y --purge remove hexchat
+sudo apt-get -y --purge remove hexchat-common
+
+echo "\033[31m"'### kdeconnect 제거 ###'"\033[0m"
+# KDEConnect(kdenlive 설치시 kdeconnect가 같이 설치되는 버그가 있음)
+#sudo apt-get --purge remove kdeconnect -y
+
+
+
+

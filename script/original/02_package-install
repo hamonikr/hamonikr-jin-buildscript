@@ -1,0 +1,117 @@
+#!/bin/bash
+# 
+# Date : 2020.10.20
+# 목적 : HamoniKR 4.0 일반 패키지 인스톨
+
+echo "\033[31m"'### naver-whale 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'
+wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -
+
+echo "\033[31m"'### shutter 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+sudo add-apt-repository -y ppa:linuxuprising/shutter
+
+echo "\033[31m"'### visual studio code 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+# 저장소 추가 후 반영하기 위한 업데이트
+sudo apt-get update
+#sudo apt-get upgrade
+
+
+echo "\033[31m"'### apt-transport-https - 패키지 관리자가 https를 통해 데이터 및 패키지에 접근할 수 있도록 하는 패키지 ###'"\033[0m"
+sudo apt-get install -y apt-transport-https
+
+echo "\033[31m"'### asbru-cm ###'"\033[0m"
+sudo apt-get install -y asbru-cm
+
+echo "\033[31m"'### build-essential - 개발에 필요한 라이브러리 헤더파일을 가지고 있는 패키지 ###'"\033[0m"
+sudo apt-get install -y build-essential
+
+echo "\033[31m"'### boot-repair - 부트 영역이 손상되어 부팅이 되지 않을 때 복구 해주는 패키지 ###'"\033[0m"
+sudo apt-get install -y boot-repair
+
+echo "\033[31m"'### clam - 안티 바이러스 패키지 ###'"\033[0m"
+sudo apt-get install -y clamav-daemon clamav-freshclam clamav clamtk
+
+echo "\033[31m"'### visual studio code ###'"\033[0m"
+sudo apt-get install -y code
+
+echo "\033[31m"'### default-jdk ###'"\033[0m"
+sudo apt-get install -y default-jdk
+
+echo "\033[31m"'### dvdauthor ###'"\033[0m"
+sudo apt-get install -y dvdauthor
+
+echo "\033[31m"'### figlet ###'"\033[0m"
+sudo apt-get install -y figlet
+# echo 'figlet HamoniKR' >> /etc/skel/.bashrc"
+# work log for persional"
+#echo 'DEBEMAIL="hamonikr-packages@googlegroups.com"' >> /etc/skel/.bashrc
+#echo 'DEBFULLNAME="HamoniKR Team"' >> /etc/skel/.bashrc
+#echo 'export DEBEMAIL DEBFULLNAME' >> /etc/skel/.bashrc
+#echo 'alias logout="gnome-session-quit --logout --no-prompt"' >> /etc/skel/.bashrc
+
+echo "\033[31m"'### filezilla - ftp 소프트웨어 ###'"\033[0m"
+sudo apt-get install -y filezilla
+
+echo "\033[31m"'### freeplane - 마인드맵 프로그램 ###'"\033[0m"
+sudo apt-get install -y freeplane
+
+echo "\033[31m"'### gimp ###'"\033[0m"
+sudo apt-get install -y gimp
+
+echo "\033[31m"'### git ###'"\033[0m"
+sudo apt-get install -y git
+
+echo "\033[31m"'### hardinfo - 컴퓨터 정보 확인 프로그램 ###'"\033[0m"
+sudo apt-get install -y hardinfo
+
+echo "\033[31m"'### htop - 실시간 프로세스 관리자 ###'"\033[0m"
+sudo apt-get install -y htop
+
+echo "\033[31m"'### iptraf - 실시간 패킷 분석 ###'"\033[0m"
+sudo apt-get install -y iptraf
+
+echo "\033[31m"'### kdenlive - 동영상 편집 프로그램 ###'"\033[0m"
+sudo apt-get install -y kdenlive
+
+echo "\033[31m"'### meld ###'"\033[0m"
+sudo apt-get install -y meld
+
+echo "\033[31m"'### naver-whale ###'"\033[0m"
+sudo apt-get install -y naver-whale-stable
+
+
+echo "\033[31m"'### nmap ###'"\033[0m"
+sudo apt-get install -y nmap
+
+echo "\033[31m"'### nmon ###'"\033[0m"
+sudo apt-get install -y nmon
+
+echo "\033[31m"'### numlockx ###'"\033[0m"
+sudo apt-get install -y numlockx
+
+echo "\033[31m"'### obs-studio ###'"\033[0m"
+sudo apt-get install -y obs-studio
+
+echo "\033[31m"'### pinta ###'"\033[0m"
+sudo apt-get install -y pinta
+
+echo "\033[31m"'### remmina 원격접속 프로그램 ###'"\033[0m"
+sudo apt-get install -y remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-vnc remmina-plugin-spice
+
+echo "\033[31m"'### shutter 화면캡쳐 및 수정 ###'"\033[0m"
+# gnome-web-photo는 shutter의 웹사이트 스크린샷을 사용할 때 필요한 패키지
+sudo apt-get install -y shutter
+sudo apt-get install -y gnome-web-photo
+
+echo "\033[31m"'### vim ###'"\033[0m"
+sudo apt-get install -y vim
+
+echo "\033[31m"'### vlc 미디어 플레이어 ###'"\033[0m"
+sudo apt-get install -y vlc
+
