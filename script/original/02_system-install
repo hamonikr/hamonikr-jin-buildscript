@@ -10,15 +10,17 @@ curl -sL https://pkg.hamonikr.org/add-hamonikr-jin.apt | sudo -E bash -
 
 sudo apt-get install -y hamonikr-system-settings
 
-
+# 데스크톱 환경
 sudo apt-get install -y hamonikr-desktop-environment
 
+# 하모니카 테마팩
+sudo apt-get install -y hamonikr-themes
+
+# 하모니카 아이콘팩
+sudo apt-get install -y hamonikr-jin-icon-theme
 
 # 라이브 부팅 CD 설치 인스톨러에 나오는 슬라이드 쇼
 sudo apt-get install -y ubiquity-slideshow-mint
-
-# 하모니카 아이콘 팩이 들어있는 민트X아이콘으로 아이콘 관련 설정시 설치되어 있어야 한다.
-sudo apt-get install -y mint-x-icons
 
 # 님프 관련 설정
 im-config -n nimf
@@ -28,8 +30,7 @@ im-config -n nimf
 # 온보드
 sudo apt-get install -y hamonikr-onboard-layout-ko
 
-
-# 언어팩 설치
+# 한글 언어팩 설치
 sudo apt-get install -y language-pack-ko
-# 언어팩 설정
-sudo update-locale
+# 한글 언어팩 설정(/etc/default/locale)
+#sudo update-locale

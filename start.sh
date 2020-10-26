@@ -73,7 +73,7 @@ sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
 #sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
 # casper
-sudo sh $WORK_PATH/script/original/01_casper
+#sudo sh $WORK_PATH/script/original/01_casper
 
 echo "###### chroot start ######"
 # chroot 사용하기 전 설정 (Prepare and chroot)
