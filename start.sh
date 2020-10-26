@@ -72,6 +72,9 @@ sudo cp -r $WORK_PATH/resource/* $WORK_PATH/custom-img/
 sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
 #sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
+# casper
+sudo sh $WORK_PATH/script/original/01_casper
+
 echo "###### chroot start ######"
 # chroot 사용하기 전 설정 (Prepare and chroot)
 sudo cp /etc/resolv.conf edit/etc/
@@ -94,9 +97,9 @@ ln -s /bin/true /sbin/initctl
 
 $(
 echo 'echo "###### program install start ######"'
-echo "sh /script/original/01_system-install"
-echo "sh /script/original/02_package-install"
-echo "sh /script/original/03_package-delete"
+echo "sh /script/original/02_system-install"
+echo "sh /script/original/03_package-install"
+echo "sh /script/original/04_package-delete"
 echo "sh /script/original/05_clean"
 echo 'echo "###### program install end ######"'
 )

@@ -13,6 +13,9 @@ echo "\033[31m"'### hexchat 제거 ###'"\033[0m"
 sudo apt-get -y --purge remove hexchat
 sudo apt-get -y --purge remove hexchat-common
 
+echo "\033[31m"'### kdeconnect 제거 ###'"\033[0m"
+#sudo apt-get -y --purge remove kdeconnect
+
 
 
 

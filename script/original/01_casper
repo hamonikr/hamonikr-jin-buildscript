@@ -1,0 +1,37 @@
+#!/bin/bash
+# 
+# Date : 2020.10.05
+# 목적 : 라이브CD 관련 내용 수정
+# 
+
+# 절대경로로 변경
+export WORK_PATH=$(cat ../conf/hamonikr.conf | grep work_path | awk -F 'work_path:' '{print $2}')
+
+# job in initrd-tmp ============================================
+cd $WORK_PATH/custom-img/extract-cd/casper/initrd-tmp
+# lz file mv initrd-tmp folder
+sudo mv ../initrd.lz .
+
+#20.04버전에서 사용하는 방식
+# unpack initrd.lz (early, early2, main 존재)
+unmkinitramfs -v $WORK_PATH/custom-img/extract-cd/casper/initrd.lz .
+sudo cp -r newmain/* main/
+sudo rm initrd.lz
+
+sudo chmod 777 $WORK_PATH/custom-img/extract-cd/casper/initrd-tmp
+
+# repack initrd.lz
+cd $WORK_PATH/custom-img/extract-cd/casper/initrd-tmp/early
+sudo find . -print0 | sudo cpio --null --create --format=newc > $WORK_PATH/custom-img/extract-cd/casper/initrd.lz
+cd $WORK_PATH/custom-img/extract-cd/casper/initrd-tmp/early2
+sudo find kernel -print0 | sudo cpio --null --create --format=newc >> $WORK_PATH/custom-img/extract-cd/casper/initrd.lz
+cd $WORK_PATH/custom-img/extract-cd/casper/initrd-tmp/main
+sudo find . | sudo cpio --create --format=newc | xz --format=lzma >> $WORK_PATH/custom-img/extract-cd/casper/initrd.lz
+
+# mv casper
+cd $WORK_PATH/custom-img/extract-cd/casper
+# change chmod
+sudo chmod 777 initrd.lz
+
+# delete initrd-tmp folder
+sudo rm -rf initrd-tmp

@@ -26,4 +26,10 @@ im-config -n nimf
 # sed -i "s/\[''\]/\['korean:ralt_rctrl'\]/g" /usr/share/glib-2.0/schemas/org.nimf.settings.gschema.xml
 
 # 온보드
-sudo apt-get install hamonikr-onboard-layout-ko
+sudo apt-get install -y hamonikr-onboard-layout-ko
+
+
+# 언어팩 설치
+sudo apt-get install -y language-pack-ko
+# 언어팩 설정
+sudo update-locale
