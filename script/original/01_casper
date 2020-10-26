@@ -14,11 +14,9 @@ sudo mv ../initrd.lz .
 
 #20.04버전에서 사용하는 방식
 # unpack initrd.lz (early, early2, main 존재)
-unmkinitramfs -v $WORK_PATH/custom-img/extract-cd/casper/initrd.lz .
+unmkinitramfs -v initrd.lz .
 sudo cp -r newmain/* main/
 sudo rm initrd.lz
-
-sudo chmod 777 $WORK_PATH/custom-img/extract-cd/casper/initrd-tmp
 
 # repack initrd.lz
 cd $WORK_PATH/custom-img/extract-cd/casper/initrd-tmp/early
