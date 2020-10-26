@@ -96,6 +96,7 @@ $(
 echo 'echo "###### program install start ######"'
 echo "sh /script/original/01_system-install"
 echo "sh /script/original/02_package-install"
+echo "sh /script/original/03_package-delete"
 echo "sh /script/original/05_clean"
 echo 'echo "###### program install end ######"'
 )

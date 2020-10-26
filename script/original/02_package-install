@@ -3,6 +3,12 @@
 # Date : 2020.10.20
 # 목적 : HamoniKR 4.0 일반 패키지 인스톨
 
+echo "\033[31m"'### kdenlive 저장소 추가 ###'"\033[0m"
+# 저장소 추가 (저장소를 추가하지 않고 설치시 낮은 버전의 kdenlive가 설치가 됨)
+sudo sh -c 'echo "deb http://ppa.launchpad.net/kdenlive/kdenlive-stable/ubuntu focal main" >> /etc/apt/sources.list.d/kdenlive-kdenlive-stable-focal.list'
+sudo sh -c 'echo "deb-src http://ppa.launchpad.net/kdenlive/kdenlive-stable/ubuntu focal main" > /etc/apt/sources.list.d/kdenlive-kdenlive-stable-focal.list'
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A59E5EBFCCC61564D6D4365B2763B0EE7709FE97
+
 echo "\033[31m"'### naver-whale 저장소 추가 ###'"\033[0m"
 # 저장소 추가
 sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'
@@ -10,7 +16,9 @@ wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key ad
 
 echo "\033[31m"'### shutter 저장소 추가 ###'"\033[0m"
 # 저장소 추가
-sudo add-apt-repository -y ppa:linuxuprising/shutter
+sudo sh -c 'echo "deb http://ppa.launchpad.net/linuxuprising/shutter/ubuntu focal main" >> /etc/apt/sources.list.d/linuxuprising-shutter-focal.list'
+sudo sh -c 'echo "#deb-src http://ppa.launchpad.net/linuxuprising/shutter/ubuntu focal main" > /etc/apt/sources.list.d/linuxuprising-shutter-focal.list'
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 1CC3D16E460A94EE17FE581CEA8CACC073C3DB2A
 
 echo "\033[31m"'### visual studio code 저장소 추가 ###'"\033[0m"
 # 저장소 추가
@@ -85,6 +93,13 @@ sudo apt-get install -y meld
 echo "\033[31m"'### naver-whale ###'"\033[0m"
 sudo apt-get install -y naver-whale-stable
 
+echo "\033[31m"'### nemo 추가 패키지 ###'"\033[0m"
+sudo apt-get install -y \
+		nemo-image-converter \
+		nemo-seahorse \
+		nemo-filename-repairer \
+		nemo-share \
+		nemo-compare
 
 echo "\033[31m"'### nmap ###'"\033[0m"
 sudo apt-get install -y nmap
@@ -109,9 +124,21 @@ echo "\033[31m"'### shutter 화면캡쳐 및 수정 ###'"\033[0m"
 sudo apt-get install -y shutter
 sudo apt-get install -y gnome-web-photo
 
+echo "\033[31m"'### simplescreenrecorder 화면녹화 ###'"\033[0m"
+sudo apt-get install -y simplescreenrecorder
+
+echo "\033[31m"'### tree ###'"\033[0m"
+sudo apt-get install -y tree
+
 echo "\033[31m"'### vim ###'"\033[0m"
 sudo apt-get install -y vim
 
 echo "\033[31m"'### vlc 미디어 플레이어 ###'"\033[0m"
 sudo apt-get install -y vlc
+
+echo "\033[31m"'### xclip ###'"\033[0m"
+sudo apt-get install -y xclip
+
+echo "\033[31m"'### xrdp ###'"\033[0m"
+sudo apt-get install -y xrdp
 

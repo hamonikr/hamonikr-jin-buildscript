@@ -24,3 +24,6 @@ sudo apt-get install -y mint-x-icons
 im-config -n nimf
 # 라이브시디에서 한글키보드를 사용하려면 nimf 설정의 XKB 옵션 중 Hangule 키를 Right Alt 사용으로 체크
 # sed -i "s/\[''\]/\['korean:ralt_rctrl'\]/g" /usr/share/glib-2.0/schemas/org.nimf.settings.gschema.xml
+
+# 온보드
+sudo apt-get install hamonikr-onboard-layout-ko
