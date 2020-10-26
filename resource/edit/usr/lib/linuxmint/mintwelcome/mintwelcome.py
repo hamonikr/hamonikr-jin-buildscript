@@ -46,7 +46,7 @@ class MintWelcome():
         window.set_position(Gtk.WindowPosition.CENTER)
         window.connect("destroy", Gtk.main_quit)
 
-        with open("/etc/linuxmint/info") as f:
+        with open("/etc/hamonikr/info") as f:
             config = dict([line.strip().split("=") for line in f])
         codename = config['CODENAME'].capitalize()
         edition = config['EDITION'].replace('"', '')
@@ -59,7 +59,7 @@ class MintWelcome():
             architecture = "32-bit"
 
         # distro-specific
-        dist_name = "Linux Mint"
+        dist_name = "HamoniKR"
         if os.path.exists("/usr/share/doc/debian-system-adjustments/copyright"):
             dist_name = "LMDE"
 
