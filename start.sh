@@ -73,7 +73,7 @@ sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
 #sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
 # casper
-#sudo sh $WORK_PATH/script/original/01_casper
+sudo sh $WORK_PATH/script/original/01_casper
 
 echo "###### chroot start ######"
 # chroot 사용하기 전 설정 (Prepare and chroot)
@@ -88,8 +88,31 @@ mount -t sysfs none /sys
 mount -t devpts none /dev/pts
 
 # "To avoid locale issues and in order to import GPG keys..."
+export RUNLEVEL=1
+export LANGUAGE="ko_KR:ko"
+export LC_CTYPE="ko_KR.UTF-8"
+export LC_MESSAGES="ko_KR.UTF-8"
+export LC_ALL="ko_KR.UTF-8"
+export LC_TIME="ko_KR.UTF-8"
+export LC_MONETARY="ko_KR.UTF-8"
+export LC_ADDRESS="ko_KR.UTF-8"
+export LC_TELEPHONE="ko_KR.UTF-8"
+export LC_NAME="ko_KR.UTF-8"
+export LC_MEASUREMENT="ko_KR.UTF-8"
+export LC_IDENTIFICATION="ko_KR.UTF-8"
+export LC_NUMERIC="ko_KR.UTF-8"
+export LC_PAPER="ko_KR.UTF-8"
+export LANG="ko_KR.UTF-8"
 export HOME=/root
 export LC_ALL=C
+
+locale-gen ko_KR.UTF-8 && \
+update-locale LANG=ko_KR.UTF-8 LANGUAGE=ko_KR.UTF-8 LC_ALL=ko_KR.UTF-8
+
+ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+dpkg-reconfigure -f noninteractive tzdata
+timedatectl set-local-rtc 1 --adjust-system-clock
+
 dbus-uuidgen > /var/lib/dbus/machine-id
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl

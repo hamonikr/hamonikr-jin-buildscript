@@ -1,0 +1,83 @@
+# Enable extras.ubuntu.com.
+d-i     apt-setup/extras        boolean true
+
+## early_command
+d-i	preseed/early_command			string	umount -l -r -f /isodevice
+
+## Korean enviroment for HamoniKR
+d-i debian-installer/locale                 string  ko_KR
+d-i debian-installer/language               string  ko
+d-i debian-installer/country                string  KR
+d-i debian-installer/locale                 string  ko_KR.UTF-8
+d-i keyboard-configuration/layoutcode       string  kr
+d-i keyboard-configuration/variantcode      string  kr104
+d-i time/zone                               string  Asia/Seoul
+# Wait for two seconds in grub
+# d-i grub-installer/timeout                  string  5
+
+## Including openssh in the installation.And choosing on how and when to upgrade.
+# d-i pkgsel/include string openssh-server gparted build-essential
+# d-i pkgsel/update-policy select unattended-upgrades 
+# d-i pkgsel/upgrade select full-upgrade
+
+## add hamonikr user
+d-i passwd/user-fullname string HamoniKR User
+d-i passwd/username string hamonikr
+# $ printf "mypassword" | mkpasswd -s -m sha-512
+d-i passwd/user-password-crypted password $6$WE3O8tT7RY6doD$OTw9l.yIlaVP8nR6zX8GxT5DFuE3ON4hVzHJSti0beL922XYo4DyiuWqSXXR1o2NFepqrW/rTgdQVQIrM6n6x/
+d-i passwd/user-uid string 1000
+d-i passwd/user-default-groups string adm admin lpadmin audio cdrom video sudo vboxsf wireshark docker sambashare
+# d-i user-setup/encrypt-home boolean false
+d-i user-setup/allow-password-weak boolean true
+d-i passwd/auto-login boolean true
+
+### Simple GPT configuration 
+d-i partman-auto/disk string /dev/sda
+
+d-i partman/alignment string cylinder
+d-i partman/confirm_write_new_label boolean true
+d-i partman-basicfilesystems/choose_label string gpt
+d-i partman-basicfilesystems/default_label string gpt
+d-i partman-basicfilesystems/no_swap boolean false
+d-i partman-partitioning/choose_label string gpt
+d-i partman-partitioning/default_label string gpt
+d-i partman/choose_label string gpt
+d-i partman/default_label string gpt
+
+d-i partman-auto/method string regular
+d-i partman-auto/choose_recipe select gpt-boot-root
+
+# Parameters : https://wikitech.wikimedia.org/wiki/PartMan
+# Recommend : https://wiki.archlinux.org/index.php/Partitioning#Partition_scheme
+# Recommend : https://linuxmint-installation-guide.readthedocs.io/en/latest/partitioning.html
+d-i partman-auto/expert_recipe string         \
+   gpt-boot-root ::                           \
+      100 100 100 fat32                       \
+         $primary{ }                          \
+         method{ efi } format{ } .            \
+      40000 40000 40000 ext4                  \
+         $primary{ } $bootable{ }             \
+         method{ format } format{ }           \
+         use_filesystem{ } filesystem{ ext4 } \
+         mountpoint{ / } .                    \
+      10000 10000 10000 ext4                  \
+         $primary{ } $bootable{ }             \
+         method{ format } format{ }           \
+         use_filesystem{ } filesystem{ ext4 } \
+         mountpoint{ /rescue } .              \
+      300 300 -1 ext4                         \
+         $primary{ }                          \
+         method{ format } format{ }           \
+         use_filesystem{ } filesystem{ ext4 } \
+         mountpoint{ /home } . 
+
+d-i partman-partitioning/confirm_write_new_label boolean true
+d-i partman/choose_partition select finish
+d-i partman/confirm boolean true
+d-i partman/confirm_nooverwrite boolean true
+
+# late_command
+d-i preseed/late_command            string sudo gnome-terminal -- /bin/sh -c '/cdrom/preseed/postinst-invesume.sh && cdrom/preseed/rescue/bin/hamonikr_rescue_install.sh'
+
+# Same as above, but for ubiquity.
+d-i ubiquity/success_command        string sudo gnome-terminal -- /bin/sh -c '/cdrom/preseed/postinst-invesume.sh && /cdrom/preseed/rescue/bin/hamonikr_rescue_install.sh'

@@ -3,6 +3,13 @@
 # Date : 2020.10.20
 # 목적 : HamoniKR 4.0 시스템 패키지 인스톨
 
+# change fast apt mirror in korea
+sed -i 's/packages.linuxmint.com/mirrors.evowise.com\/linuxmint\/packages/g' /etc/apt/sources.list.d/official-package-repositories.list
+sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
+sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
+sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
+sed -i 's/extras.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
+
 # 하모니카 저장소 추가
 curl -sL https://pkg.hamonikr.org/add-hamonikr-jin.apt | sudo -E bash -
 
