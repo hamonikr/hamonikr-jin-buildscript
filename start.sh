@@ -145,7 +145,7 @@ sudo cp $WORK_PATH/custom-img/edit/boot/vmlinuz-* $WORK_PATH/custom-img/extract-
 sudo cp $WORK_PATH/custom-img/edit/boot/initrd.img-* $WORK_PATH/custom-img/extract-cd/casper/initrd.lz
 
 echo "커널 변경후 casper 작업"
-#sudo sh $WORK_PATH/script/original/01_casper
+sudo sh $WORK_PATH/script/original/01_casper
 
 
 ###### build iso ######

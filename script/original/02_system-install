@@ -4,7 +4,7 @@
 # 목적 : HamoniKR 4.0 시스템 패키지 인스톨
 
 # change fast apt mirror in korea
-sed -i 's/packages.linuxmint.com/mirrors.evowise.com\/linuxmint\/packages/g' /etc/apt/sources.list.d/official-package-repositories.list
+sed -i 's/packages.linuxmint.com/ftp.kaist.ac.kr\/linuxmint/g' /etc/apt/sources.list.d/official-package-repositories.list
 sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
 sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
 sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
@@ -37,7 +37,7 @@ sudo apt-get install -y hamonikr-system-settings
 sudo apt-get install -y hamonikr-desktop-environment
 
 # 하모니카 테마팩
-sudo apt-get install -y hamonikr-themes
+#sudo apt-get install -y hamonikr-themes
 
 # 하모니카 아이콘팩
 sudo apt-get install -y hamonikr-jin-icon-theme
@@ -54,14 +54,5 @@ im-config -n nimf
 sudo apt-get install -y hamonikr-onboard-layout-ko
 
 # 한글 언어팩 설치
-sudo apt-get install -y language-pack-ko
-# 한글 언어팩 설정(/etc/default/locale)
-#sudo update-locale
-
-# albert
-# Full example for Ubuntu 20.04
-curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
-echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
-sudo apt update
-sudo apt install albert
+sudo apt-get install -y language-pack-ko-base
+sudo apt-get install -y language-pack-gnome-ko-base
