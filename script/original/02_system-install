@@ -13,6 +13,22 @@ sed -i 's/extras.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official
 # 하모니카 저장소 추가
 curl -sL https://pkg.hamonikr.org/add-hamonikr-jin.apt | sudo -E bash -
 
+# 최신 커널 설치
+sudo apt-get --only-upgrade install -y linux-image-generic
+
+# 이전 커널 제거(추후 작업시 버전 변경이 필요할 수 있습니다.)
+sudo apt-get --purge remove -y linux-image-5.4.0-26-generic
+sudo apt-get --purge remove -y linux-headers-5.4.0-26
+sudo apt-get --purge remove -y linux-headers-5.4.0-26-generic
+sudo apt-get --purge remove -y linux-modules-5.4.0-26-generic
+sudo apt-get --purge remove -y linux-modules-extra-5.4.0-26-generic
+
+echo "\033[31m"'---------------------------------------------'"\033[0m"
+echo "\033[32m"' livecd 커널 변경은 chroot작업이 끝나고 이루어집니다. '"\033[0m"
+echo "\033[31m"'---------------------------------------------'"\033[0m"
+# ※ extract-cd > casper > vmlinuz는 chroot 작업이 끝나고 custom-img > edit > boot > vmlinuz-5.4.0-xx-generic 파일 복사
+# ※ extract-cd > casper > initrd.lz는 chroot 작업이 끝나고 custom-img > edit > boot > initrd-5.4.0-xx-generic 파일 복사
+
 #sudo apt-get upgrade -y
 
 sudo apt-get install -y hamonikr-system-settings
@@ -41,3 +57,11 @@ sudo apt-get install -y hamonikr-onboard-layout-ko
 sudo apt-get install -y language-pack-ko
 # 한글 언어팩 설정(/etc/default/locale)
 #sudo update-locale
+
+# albert
+# Full example for Ubuntu 20.04
+curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
+sudo apt update
+sudo apt install albert

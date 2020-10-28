@@ -72,8 +72,6 @@ sudo cp -r $WORK_PATH/resource/* $WORK_PATH/custom-img/
 sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
 #sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
-# casper
-sudo sh $WORK_PATH/script/original/01_casper
 
 echo "###### chroot start ######"
 # chroot 사용하기 전 설정 (Prepare and chroot)
@@ -141,6 +139,13 @@ sudo umount /dev/pts
 EOF
 
 sudo umount edit/dev
+
+echo "vmlinuz-5.4.0-xx-generic 커널 casper에 복사"
+sudo cp $WORK_PATH/custom-img/edit/boot/vmlinuz-* $WORK_PATH/custom-img/extract-cd/casper/vmlinuz
+sudo cp $WORK_PATH/custom-img/edit/boot/initrd.img-* $WORK_PATH/custom-img/extract-cd/casper/initrd.lz
+
+echo "커널 변경후 casper 작업"
+#sudo sh $WORK_PATH/script/original/01_casper
 
 
 ###### build iso ######
