@@ -3,6 +3,32 @@
 # Date : 2020.10.20
 # 목적 : HamoniKR 4.0 패키지 인스톨
 
+echo "\033[32m"'----------------------------------------'"\033[0m"
+echo "\033[32m"'### livecd에서 한글이 잘 나올 수 있도록 설정 ###'"\033[0m"
+echo "\033[32m"'----------------------------------------'"\033[0m"
+
+echo "\033[31m"'### 님프관련 설정 ###'"\033[0m"
+im-config -n nimf
+# 라이브시디에서 한글키보드를 사용하려면 nimf 설정의 XKB 옵션 중 Hangule 키를 Right Alt 사용으로 체크
+sed -i "s/\[''\]/\['korean:ralt_rctrl'\]/g" /usr/share/glib-2.0/schemas/org.nimf.settings.gschema.xml
+
+echo "\033[31m"'### 한글 언어팩 및 지역화 패키지 설치 ###'"\033[0m"
+# 한글 언어팩 설치
+sudo apt-get install -y language-pack-ko-base
+sudo apt-get install -y language-pack-gnome-ko-base
+# 지역화 패키지 설치
+sudo apt-get install -y libreoffice-l10n-ko
+sudo apt-get install -y libreoffice-help-ko
+sudo apt-get install -y firefox-locale-ko
+sudo apt-get install -y thunderbird-locale-ko
+sudo apt-get install -y gimp-help-ko
+sudo apt-get install -y hunspell-ko
+
+
+echo "\033[32m"'-----------------'"\033[0m"
+echo "\033[32m"'### 패키지 설치 ###'"\033[0m"
+echo "\033[32m"'-----------------'"\033[0m"
+
 echo "\033[31m"'### apt-transport-https - 패키지 관리자가 https를 통해 데이터 및 패키지에 접근할 수 있도록 하는 패키지 ###'"\033[0m"
 sudo apt-get install -y apt-transport-https
 
@@ -85,6 +111,9 @@ sudo apt-get install -y numlockx
 
 echo "\033[31m"'### obs-studio ###'"\033[0m"
 sudo apt-get install -y obs-studio
+
+echo "\033[31m"'### onboard - 가상키보드 ###'"\033[0m"
+sudo apt-get install -y hamonikr-onboard-layout-ko
 
 echo "\033[31m"'### pinta ###'"\033[0m"
 sudo apt-get install -y pinta
