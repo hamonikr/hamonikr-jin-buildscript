@@ -1,0 +1,19 @@
+[Desktop Entry]
+Name=FileZilla
+Name=파일질라 FTP
+GenericName=FTP client
+GenericName[da]=FTP-klient
+GenericName[de]=FTP-Client
+GenericName[fr]=Client FTP
+GenericName[ko]=FTP 클라이언트
+Comment=Download and upload files via FTP, FTPS and SFTP
+Comment[da]=Download og upload filer via FTP, FTPS og SFTP
+Comment[de]=Dateien über FTP, FTPS und SFTP übertragen
+Comment[fr]=Transférer des fichiers via FTP, FTPS et SFTP
+Comment[ko]=FTP, SFTP 로 파일을 업로드 다운로드 합니다
+Exec=filezilla
+Terminal=false
+Icon=filezilla
+Type=Application
+Categories=Network;FileTransfer;
+Version=1.0

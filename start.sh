@@ -69,8 +69,9 @@ sudo umount mnt
 
 # 리소스 복사
 sudo cp -r $WORK_PATH/resource/* $WORK_PATH/custom-img/
+# 리소스 edit 폴더로 복사 및 이동
 sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
-#sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
+sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
 
 echo "###### chroot start ######"
@@ -118,10 +119,12 @@ ln -s /bin/true /sbin/initctl
 
 $(
 echo 'echo "###### program install start ######"'
+echo "sh /script/original/01_add-repository"
 echo "sh /script/original/02_system-install"
 echo "sh /script/original/03_package-install"
 echo "sh /script/original/04_package-delete"
-echo "sh /script/original/05_clean"
+echo "sh /script/original/05_install-after"
+echo "sh /script/original/06_clean"
 echo 'echo "###### program install end ######"'
 )
 
@@ -145,7 +148,7 @@ sudo cp $WORK_PATH/custom-img/edit/boot/vmlinuz-* $WORK_PATH/custom-img/extract-
 sudo cp $WORK_PATH/custom-img/edit/boot/initrd.img-* $WORK_PATH/custom-img/extract-cd/casper/initrd.lz
 
 echo "커널 변경후 casper 작업"
-sudo sh $WORK_PATH/script/original/01_casper
+sudo sh $WORK_PATH/script/original/99_casper
 
 
 ###### build iso ######

@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=System Profiler and Benchmark
+Name[es]=Informacion y Rendimiento del Sistema
+Name[fr]=Informations et Benchmarks du Système
+Name[ko]=시스템 프로파일 및 벤치마크
+Name[pt_BR]=Informações e Testes do Sistema
+Name[ru]=Информация о системе и тестирование
+Comment=Displays system information
+Comment[ko]=시스템 정보 표시
+Comment[ru]=Показывает информацию о системе
+Exec=/usr/bin/hardinfo
+Icon=/usr/share/hardinfo/pixmaps/logo.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=System;
+Keywords=linux;kernel;system;hardware;cpu;processor;capabilities;frequency;memory;ram;board;resources;sensors;devices;usb;pci;display;network;benchmark;test;

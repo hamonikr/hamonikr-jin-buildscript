@@ -3,6 +3,10 @@
 # Date : 2020.10.20
 # 목적 : HamoniKR 4.0 시스템 패키지 인스톨
 
+echo "\033[32m"'--------------------------------------'"\033[0m"
+echo "\033[32m"' 하모니카 시스템에 필요한 패키지 인스톨 '"\033[0m"
+echo "\033[32m"'--------------------------------------'"\033[0m"
+
 # change fast apt mirror in korea
 sed -i 's/packages.linuxmint.com/ftp.kaist.ac.kr\/linuxmint/g' /etc/apt/sources.list.d/official-package-repositories.list
 sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
@@ -10,8 +14,12 @@ sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/offi
 sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
 sed -i 's/extras.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list.d/official-package-repositories.list
 
-# 하모니카 저장소 추가
+# 하모니카 저장소 추가 (저장소가 추가될 때 apt update 됨)
 curl -sL https://pkg.hamonikr.org/add-hamonikr-jin.apt | sudo -E bash -
+
+echo "\033[32m"'-------------------'"\033[0m"
+echo "\033[32m"' 최신버전 커널 설치 '"\033[0m"
+echo "\033[32m"'-------------------'"\033[0m"
 
 # 최신 커널 설치
 sudo apt-get --only-upgrade install -y linux-image-generic
@@ -23,21 +31,23 @@ sudo apt-get --purge remove -y linux-headers-5.4.0-26-generic
 sudo apt-get --purge remove -y linux-modules-5.4.0-26-generic
 sudo apt-get --purge remove -y linux-modules-extra-5.4.0-26-generic
 
-echo "\033[31m"'---------------------------------------------'"\033[0m"
+echo "\033[32m"'---------------------------------------------------'"\033[0m"
+echo "\033[32m"' 최신 커널 설치 완료 '"\033[0m"
 echo "\033[32m"' livecd 커널 변경은 chroot작업이 끝나고 이루어집니다. '"\033[0m"
-echo "\033[31m"'---------------------------------------------'"\033[0m"
+echo "\033[32m"'---------------------------------------------------'"\033[0m"
 # ※ extract-cd > casper > vmlinuz는 chroot 작업이 끝나고 custom-img > edit > boot > vmlinuz-5.4.0-xx-generic 파일 복사
 # ※ extract-cd > casper > initrd.lz는 chroot 작업이 끝나고 custom-img > edit > boot > initrd-5.4.0-xx-generic 파일 복사
 
 #sudo apt-get upgrade -y
 
+# 하모니카 시스템 세팅
 sudo apt-get install -y hamonikr-system-settings
 
 # 데스크톱 환경
 sudo apt-get install -y hamonikr-desktop-environment
 
 # 하모니카 테마팩
-#sudo apt-get install -y hamonikr-themes
+sudo apt-get install -y hamonikr-jin-themes
 
 # 하모니카 아이콘팩
 sudo apt-get install -y hamonikr-jin-icon-theme
@@ -48,7 +58,7 @@ sudo apt-get install -y ubiquity-slideshow-mint
 # 님프 관련 설정
 im-config -n nimf
 # 라이브시디에서 한글키보드를 사용하려면 nimf 설정의 XKB 옵션 중 Hangule 키를 Right Alt 사용으로 체크
-# sed -i "s/\[''\]/\['korean:ralt_rctrl'\]/g" /usr/share/glib-2.0/schemas/org.nimf.settings.gschema.xml
+sed -i "s/\[''\]/\['korean:ralt_rctrl'\]/g" /usr/share/glib-2.0/schemas/org.nimf.settings.gschema.xml
 
 # 온보드
 sudo apt-get install -y hamonikr-onboard-layout-ko

@@ -1,0 +1,31 @@
+#!/bin/bash
+# 
+# Date : 2020.10.30
+# 목적 : HamoniKR 4.0 개인 저장소 추가
+
+echo "\033[32m"'------------'"\033[0m"
+echo "\033[32m"' 저장소 추가 '"\033[0m"
+echo "\033[32m"'------------'"\033[0m"
+
+
+echo "\033[31m"'### kdenlive 저장소 추가 ###'"\033[0m"
+# 저장소 추가 (저장소를 추가하지 않고 설치시 낮은 버전의 kdenlive가 설치가 됨)
+sudo sh -c 'echo "deb http://ppa.launchpad.net/kdenlive/kdenlive-stable/ubuntu focal main" > /etc/apt/sources.list.d/kdenlive-kdenlive-stable-focal.list'
+sudo sh -c 'echo "deb-src http://ppa.launchpad.net/kdenlive/kdenlive-stable/ubuntu focal main" >> /etc/apt/sources.list.d/kdenlive-kdenlive-stable-focal.list'
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A59E5EBFCCC61564D6D4365B2763B0EE7709FE97
+
+echo "\033[31m"'### naver-whale 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" > /etc/apt/sources.list.d/naver-whale.list'
+wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -
+
+echo "\033[31m"'### shutter 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+sudo sh -c 'echo "deb http://ppa.launchpad.net/linuxuprising/shutter/ubuntu focal main" > /etc/apt/sources.list.d/linuxuprising-shutter-focal.list'
+sudo sh -c 'echo "#deb-src http://ppa.launchpad.net/linuxuprising/shutter/ubuntu focal main" >> /etc/apt/sources.list.d/linuxuprising-shutter-focal.list'
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 1CC3D16E460A94EE17FE581CEA8CACC073C3DB2A
+
+echo "\033[31m"'### visual studio code 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
