@@ -8,7 +8,7 @@ export chroot_workpath='/deb'
 export chroot_after_rss='/deb/install_after'
 
 sudo dpkg --configure -a ; \
-sudo apt autoremove ; \
+sudo apt autoremove -y; \
 sudo apt-get install -f
 
 # copy files after install

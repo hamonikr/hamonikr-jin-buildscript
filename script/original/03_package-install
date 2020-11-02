@@ -24,9 +24,7 @@ sudo apt-get install -y thunderbird-locale-ko
 sudo apt-get install -y gimp-help-ko
 sudo apt-get install -y hunspell-ko
 
-# asbru-cm bug fix : 시스템 전체에 사용하는 Perl Glib 모듈의 업데이트
-sudo apt install -y libglib2.0-dev cpanminus
-sudo cpanm -i Glib
+
 
 echo "\033[32m"'-----------------'"\033[0m"
 echo "\033[32m"'### 패키지 설치 ###'"\033[0m"
@@ -37,6 +35,9 @@ sudo apt-get install -y apt-transport-https
 
 echo "\033[31m"'### asbru-cm ###'"\033[0m"
 sudo apt-get install -y asbru-cm
+# asbru-cm bug fix : 시스템 전체에 사용하는 Perl Glib 모듈의 업데이트
+sudo apt install -y libglib2.0-dev cpanminus
+sudo cpanm -i Glib
 
 echo "\033[31m"'### build-essential - 개발에 필요한 라이브러리 헤더파일을 가지고 있는 패키지 ###'"\033[0m"
 sudo apt-get install -y build-essential
@@ -125,8 +126,8 @@ echo "\033[31m"'### remmina 원격접속 프로그램 ###'"\033[0m"
 sudo apt-get install -y remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-vnc remmina-plugin-spice
 
 echo "\033[31m"'### shutter 화면캡쳐 및 수정 ###'"\033[0m"
-# gnome-web-photo는 shutter의 웹사이트 스크린샷을 사용할 때 필요한 패키지
 sudo apt-get install -y shutter
+# gnome-web-photo는 shutter의 웹사이트 스크린샷을 사용할 때 필요한 패키지
 sudo apt-get install -y gnome-web-photo
 
 echo "\033[31m"'### simplescreenrecorder 화면녹화 ###'"\033[0m"

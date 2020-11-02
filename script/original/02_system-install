@@ -38,7 +38,7 @@ echo "\033[32m"'---------------------------------------------------'"\033[0m"
 # ※ extract-cd > casper > vmlinuz는 chroot 작업이 끝나고 custom-img > edit > boot > vmlinuz-5.4.0-xx-generic 파일 복사
 # ※ extract-cd > casper > initrd.lz는 chroot 작업이 끝나고 custom-img > edit > boot > initrd-5.4.0-xx-generic 파일 복사
 
-#sudo apt-get upgrade -y
+sudo apt-get upgrade -y
 
 # 하모니카 시스템 세팅
 sudo apt-get install -y hamonikr-system-settings

@@ -29,3 +29,9 @@ echo "\033[31m"'### visual studio code 저장소 추가 ###'"\033[0m"
 # 저장소 추가
 sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+echo "\033[31m"'### remmina 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+sudo sh -c 'echo "deb http://ppa.launchpad.net/remmina-ppa-team/remmina-next/ubuntu focal main" > /etc/apt/sources.list.d/remmina-ppa-team-remmina-next-focal.list'
+sudo sh -c 'echo "#deb-src http://ppa.launchpad.net/remmina-ppa-team/remmina-next/ubuntu focal main" >> /etc/apt/sources.list.d/remmina-ppa-team-remmina-next-focal.list'
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 04E38CE134B239B9F38F82EE8A993C2521C5F0BA

@@ -8,7 +8,8 @@ sudo apt-get -y --purge remove hexchat
 sudo apt-get -y --purge remove hexchat-common
 
 echo "\033[31m"'### kdeconnect 제거 ###'"\033[0m"
-#sudo apt-get -y --purge remove kdeconnect
+echo "\033[31m"'### kdenlive 설치시 자동으로 설치되며 의존관계가 없습니다. ###'"\033[0m"
+sudo apt-get -y --purge remove kdeconnect
 
 
 
