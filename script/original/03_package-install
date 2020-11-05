@@ -122,8 +122,14 @@ sudo apt-get install -y hamonikr-onboard-layout-ko
 echo "\033[31m"'### pinta ###'"\033[0m"
 sudo apt-get install -y pinta
 
+echo "\033[31m"'### qt-fsarchiver ###'"\033[0m"
+sudo apt-get install -y qt-fsarchiver
+
 echo "\033[31m"'### remmina 원격접속 프로그램 ###'"\033[0m"
 sudo apt-get install -y remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-vnc remmina-plugin-spice
+
+echo "\033[31m"'### samba ###'"\033[0m"
+sudo apt-get install -y samba
 
 echo "\033[31m"'### shutter 화면캡쳐 및 수정 ###'"\033[0m"
 sudo apt-get install -y shutter

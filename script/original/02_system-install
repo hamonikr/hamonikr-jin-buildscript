@@ -46,8 +46,11 @@ sudo apt-get install -y hamonikr-system-settings
 # 데스크톱 환경
 sudo apt-get install -y hamonikr-desktop-environment
 
-# 하모니카 테마팩
-#sudo apt-get install -y hamonikr-jin-themes
+# 하모니카 GRUB 테마
+sudo apt-get install -y grub-theme-hamonikr-jin
+
+# 하모니카 PLYMOUTH 테마
+sudo apt-get install -y plymouth-theme-hamonikr
 
 # 하모니카 아이콘팩
 sudo apt-get install -y hamonikr-jin-icon-theme
@@ -55,4 +58,5 @@ sudo apt-get install -y hamonikr-jin-icon-theme
 # 라이브 부팅 CD 설치 인스톨러에 나오는 슬라이드 쇼
 sudo apt-get install -y ubiquity-slideshow-mint
 
-
+# 민트 리포트(하모니카 리포트)
+sudo apt-get install -y mintreport
