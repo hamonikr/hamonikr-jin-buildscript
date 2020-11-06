@@ -73,6 +73,9 @@ sudo cp -r $WORK_PATH/resource/* $WORK_PATH/custom-img/
 sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
 sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
+# Re-generator inside ISO image's repo
+sudo apt install --reinstall -y -qqq ubuntu-keyring/jin
+. $WORK_PATH/update-iso-repo.sh
 
 echo "###### chroot start ######"
 # chroot 사용하기 전 설정 (Prepare and chroot)
