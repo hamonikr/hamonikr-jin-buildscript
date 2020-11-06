@@ -10,5 +10,5 @@ d-i time/zone                               string  Asia/Seoul
 
 d-i passwd/user-default-groups string adm admin audio cdrom video sudo vboxsf wireshark docker sambashare lpadmin
 
-d-i preseed/late_command            string sudo gnome-terminal -- /bin/sh -c '/cdrom/preseed/postinst.sh'
-d-i ubiquity/success_command        string sudo gnome-terminal -- /bin/sh -c '/cdrom/preseed/postinst.sh'
+d-i preseed/late_command            string sudo gnome-terminal -- /bin/bash -execute '/cdrom/preseed/postinst.sh'
+d-i ubiquity/success_command        string sudo gnome-terminal -- /bin/bash -execute '/cdrom/preseed/postinst.sh'

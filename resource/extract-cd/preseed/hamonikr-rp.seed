@@ -77,7 +77,7 @@ d-i partman/confirm boolean true
 d-i partman/confirm_nooverwrite boolean true
 
 # late_command
-d-i preseed/late_command            string sudo gnome-terminal -- /bin/sh -c '/cdrom/preseed/postinst-invesume.sh && cdrom/preseed/rescue/bin/hamonikr_rescue_install.sh'
+d-i preseed/late_command            string sudo gnome-terminal -- /bin/bash -execute '/cdrom/preseed/postinst-invesume.sh && /cdrom/preseed/rescue/bin/hamonikr_rescue_install.sh'
 
 # Same as above, but for ubiquity.
-d-i ubiquity/success_command        string sudo gnome-terminal -- /bin/sh -c '/cdrom/preseed/postinst-invesume.sh && /cdrom/preseed/rescue/bin/hamonikr_rescue_install.sh'
+d-i ubiquity/success_command        string sudo gnome-terminal -- /bin/bash -execute '/cdrom/preseed/postinst-invesume.sh && /cdrom/preseed/rescue/bin/hamonikr_rescue_install.sh'
