@@ -60,3 +60,6 @@ sudo apt-get install -y ubiquity-slideshow-mint
 
 # 민트 리포트(하모니카 리포트)
 sudo apt-get install -y mintreport
+
+# Re-generator inside ISO image's repo(하모니카 키가 포함되어 있는 우분투 키링 패키지)
+sudo apt install --reinstall -y -qqq ubuntu-keyring/jin

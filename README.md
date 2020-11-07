@@ -8,8 +8,12 @@
 - input_iso:베이스 iso 파일
 - output_iso:제작될 iso 파일명
 
-## Build
-- sudo ./start.sh
+## Build 순서
+- 중간에 서명을 해야 하는 부분이 있어서 다음과 같이 변경
+- 각종 패키지 인스톨 > 서명 > iso생성
+- sudo ./1-start.sh
+- sudo ./2-update-iso-repo.sh
+- sudo ./3-end.sh
 
 ## directory
 - conf:빌드를 하기위한 주소 설정 파일
