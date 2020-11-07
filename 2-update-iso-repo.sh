@@ -25,19 +25,19 @@ TreeDefault {
 };
 Tree "dists/focal" {
 	Sections "main contrib";
-	Architectures "amd64";
+	Architectures "i386 amd64 all source";
 }
 EOF
 
 cat <<EOF > release.conf
 APT::FTPArchive::Release::Origin "Ubuntu";
-APT::FTPArchive::Release::Label "Ubuntu";
+APT::FTPArchive::Release::Label "HamoniKR 4.0 Jin";
 APT::FTPArchive::Release::Suite "focal";
 APT::FTPArchive::Release::Version "20.04";
 APT::FTPArchive::Release::Codename "focal";
-APT::FTPArchive::Release::Architectures "amd64";
+APT::FTPArchive::Release::Architectures "i386 amd64 all source";
 APT::FTPArchive::Release::Components "main contrib";
-APT::FTPArchive::Release::Description "Ubuntu 20.04 LTS";
+APT::FTPArchive::Release::Description "HamoniKR 4.0 Jin LTS";
 EOF
 
 mkdir /tmp/cache
