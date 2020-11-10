@@ -63,3 +63,6 @@ sudo apt-get install -y mintreport
 
 # Re-generator inside ISO image's repo(하모니카 키가 포함되어 있는 우분투 키링 패키지)
 sudo apt install --reinstall -y -qqq ubuntu-keyring/jin
+
+# 하모니카 바탕화면 UI 테마
+sudo apt-get install -y hamonikr-themes

@@ -54,6 +54,11 @@ sudo apt-get install -y code
 echo "\033[31m"'### default-jdk ###'"\033[0m"
 sudo apt-get install -y default-jdk
 
+echo "\033[31m"'### docker ###'"\033[0m"
+sudo apt-get install -y docker-ce \
+						docker-ce-cli \
+						containerd.io
+						
 echo "\033[31m"'### dvdauthor ###'"\033[0m"
 sudo apt-get install -y dvdauthor
 
@@ -77,6 +82,9 @@ sudo apt-get install -y gimp
 
 echo "\033[31m"'### git ###'"\033[0m"
 sudo apt-get install -y git
+
+echo "\033[31m"'### gnupg-agent ###'"\033[0m"
+sudo apt-get install -y gnupg-agent
 
 echo "\033[31m"'### hardinfo - 컴퓨터 정보 확인 프로그램 ###'"\033[0m"
 sudo apt-get install -y hardinfo
@@ -138,6 +146,9 @@ sudo apt-get install -y gnome-web-photo
 
 echo "\033[31m"'### simplescreenrecorder 화면녹화 ###'"\033[0m"
 sudo apt-get install -y simplescreenrecorder
+
+echo "\033[31m"'### software-properties-common ###'"\033[0m"
+sudo apt-get install -y software-properties-common
 
 echo "\033[31m"'### tree ###'"\033[0m"
 sudo apt-get install -y tree
