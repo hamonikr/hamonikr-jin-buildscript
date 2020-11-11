@@ -36,7 +36,12 @@ sudo sh -c 'echo "deb http://ppa.launchpad.net/remmina-ppa-team/remmina-next/ubu
 sudo sh -c 'echo "#deb-src http://ppa.launchpad.net/remmina-ppa-team/remmina-next/ubuntu focal main" >> /etc/apt/sources.list.d/remmina-ppa-team-remmina-next-focal.list'
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 04E38CE134B239B9F38F82EE8A993C2521C5F0BA
 
-echo "\033[31m"'### docker 저장소 추가 ###'"\033[0m"
+#echo "\033[31m"'### docker 저장소 추가 ###'"\033[0m"
 # 저장소 추가
-wget -q -O - https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" > /etc/apt/sources.list.d/additional-repositories.list'
+#wget -q -O - https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#sudo sh -c 'echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" > /etc/apt/sources.list.d/additional-repositories.list'
+
+echo "\033[31m"'### github-desktop 저장소 추가 ###'"\033[0m"
+# 저장소 추가
+wget -q -O - https://packagecloud.io/shiftkey/desktop/gpgkey | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/shiftkey/desktop/any/ any main" > /etc/apt/sources.list.d/packagecloud-shiftky-desktop.list'

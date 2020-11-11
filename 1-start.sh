@@ -3,7 +3,7 @@
 # Date 2020.10.05
 # 목적 : HamoniKR 4.0-jin-beta iso Build
 # input : linuxmint-20-cinnamon-64bit.iso
-# output : hamonikr-jin-4.0-beta-amd64.iso
+# output : hamonikr-jin-4.0-amd64.iso
 
 ###### 절대경로(realpath) ######
 WORK_PATH="$(dirname $(realpath -s $0))"

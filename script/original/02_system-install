@@ -47,7 +47,7 @@ sudo apt-get install -y hamonikr-system-settings
 sudo apt-get install -y hamonikr-desktop-environment
 
 # 하모니카 GRUB 테마
-#sudo apt-get install -y grub-theme-hamonikr-jin
+sudo apt-get install -y grub-theme-hamonikr-jin
 
 # 하모니카 PLYMOUTH 테마
 sudo apt-get install -y plymouth-theme-hamonikr

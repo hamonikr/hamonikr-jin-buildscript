@@ -54,11 +54,14 @@ sudo apt-get install -y code
 echo "\033[31m"'### default-jdk ###'"\033[0m"
 sudo apt-get install -y default-jdk
 
-echo "\033[31m"'### docker ###'"\033[0m"
-sudo apt-get install -y docker-ce \
-						docker-ce-cli \
-						containerd.io
-						
+# echo "\033[31m"'### docker ###'"\033[0m"
+# sudo apt-get install -y docker-ce \
+# 						docker-ce-cli \
+# 						containerd.io
+
+echo "\033[31m"'### docker-clean - ※패키지 파일 아님 /usr/local/bin에 있는 스크립트 파일 ###'"\033[0m"
+curl -s https://raw.githubusercontent.com/ZZROTDesign/docker-clean/v2.0.4/docker-clean | sudo tee /usr/local/bin/docker-clean > /dev/null && sudo chmod +x /usr/local/bin/docker-clean
+
 echo "\033[31m"'### dvdauthor ###'"\033[0m"
 sudo apt-get install -y dvdauthor
 
@@ -77,14 +80,29 @@ sudo apt-get install -y filezilla
 echo "\033[31m"'### freeplane - 마인드맵 프로그램 ###'"\033[0m"
 sudo apt-get install -y freeplane
 
+echo "\033[31m"'### geany - 편집기 ###'"\033[0m"
+sudo apt-get install -y geany
+
 echo "\033[31m"'### gimp ###'"\033[0m"
 sudo apt-get install -y gimp
 
 echo "\033[31m"'### git ###'"\033[0m"
 sudo apt-get install -y git
 
+echo "\033[31m"'### git-lfs - 대용량 파일 버전 관리 ###'"\033[0m"
+sudo apt-get install -y git-lfs
+
+echo "\033[31m"'### github-desktop - 깃허브 데스크탑 ###'"\033[0m"
+sudo apt-get install -y github-desktop
+
 echo "\033[31m"'### gnupg-agent ###'"\033[0m"
 sudo apt-get install -y gnupg-agent
+
+echo "\033[31m"'### golang - Go언어 ###'"\033[0m"
+sudo apt-get install -y golang
+
+echo "\033[31m"'### hamonikr-ff - 쉬운 터미널 검색, 편집 프로그램 ###'"\033[0m"
+sudo apt-get install -y hamonikr-ff
 
 echo "\033[31m"'### hardinfo - 컴퓨터 정보 확인 프로그램 ###'"\033[0m"
 sudo apt-get install -y hardinfo
@@ -118,6 +136,12 @@ sudo apt-get install -y nmap
 echo "\033[31m"'### nmon ###'"\033[0m"
 sudo apt-get install -y nmon
 
+echo "\033[31m"'### nodejs - v10.19.00 ###'"\033[0m"
+sudo apt-get install -y nodejs
+
+echo "\033[31m"'### npm ###'"\033[0m"
+sudo apt-get install -y npm
+
 echo "\033[31m"'### numlockx ###'"\033[0m"
 sudo apt-get install -y numlockx
 
@@ -129,6 +153,12 @@ sudo apt-get install -y hamonikr-onboard-layout-ko
 
 echo "\033[31m"'### pinta ###'"\033[0m"
 sudo apt-get install -y pinta
+
+echo "\033[31m"'### putty ###'"\033[0m"
+sudo apt-get install -y putty
+
+echo "\033[31m"'### pydf ###'"\033[0m"
+sudo apt-get install -y pydf
 
 echo "\033[31m"'### qt-fsarchiver ###'"\033[0m"
 sudo apt-get install -y qt-fsarchiver
@@ -167,4 +197,36 @@ sudo apt-get install -y xclip
 
 echo "\033[31m"'### xrdp ###'"\033[0m"
 sudo apt-get install -y xrdp
+
+echo "\033[32m"'------------------------------------------------'"\033[0m"
+echo "\033[32m"'### pkg jin upstream 추가한 단일 패키지 파일 설치 ###'"\033[0m"
+echo "\033[32m"'------------------------------------------------'"\033[0m"
+
+#echo "\033[31m"'### 알집 ###'"\033[0m"
+# /etc폴더 제거(내용포함), 그냥은 실행이 되지 않아 /usr/local/bin/lib안에 .sh 스크립트를 만들어 컨트롤
+#sudo apt-get install -y alzip
+
+echo "\033[31m"'### 팀업 ###'"\033[0m"
+# control 파일의 패키지명이 대문자 > 수정하여 다시 패키징
+sudo apt-get install -y teamup
+
+
+
+echo "\033[31m"'### discord ###'"\033[0m"
+sudo apt-get install -y discord
+
+echo "\033[31m"'### python3-multibootusb ###'"\033[0m"
+sudo apt-get install -y python3-multibootusb
+
+echo "\033[31m"'### simplenote ###'"\033[0m"
+sudo apt-get install -y simplenote
+
+echo "\033[31m"'### slack-desktop ###'"\033[0m"
+sudo apt-get install -y slack-desktop
+
+echo "\033[31m"'### teams ###'"\033[0m"
+sudo apt-get install -y teams
+
+
+
 
