@@ -59,8 +59,8 @@ sudo apt-get install -y default-jdk
 # 						docker-ce-cli \
 # 						containerd.io
 
-echo "\033[31m"'### docker-clean - ※패키지 파일 아님 /usr/local/bin에 있는 스크립트 파일 ###'"\033[0m"
-curl -s https://raw.githubusercontent.com/ZZROTDesign/docker-clean/v2.0.4/docker-clean | sudo tee /usr/local/bin/docker-clean > /dev/null && sudo chmod +x /usr/local/bin/docker-clean
+#echo "\033[31m"'### docker-clean - ※패키지 파일 아님 /usr/local/bin에 있는 스크립트 파일 ###'"\033[0m"
+#curl -s https://raw.githubusercontent.com/ZZROTDesign/docker-clean/v2.0.4/docker-clean | sudo tee /usr/local/bin/docker-clean > /dev/null && sudo chmod +x /usr/local/bin/docker-clean
 
 echo "\033[31m"'### dvdauthor ###'"\033[0m"
 sudo apt-get install -y dvdauthor
