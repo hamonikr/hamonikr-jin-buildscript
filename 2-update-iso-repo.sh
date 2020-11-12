@@ -126,5 +126,5 @@ sudo chmod a+w $UPSTREAM_ISO/* -R
 sudo su - ${RUID} -c "gpg --default-key 9FA298A1E42665B8 --output $UPSTREAM_ISO/dists/focal/Release.gpg -ba $UPSTREAM_ISO/dists/focal/Release"
 sudo su - ${RUID} -c "gpg --default-key 9FA298A1E42665B8 --clearsign -o $UPSTREAM_ISO/dists/focal/InRelease $UPSTREAM_ISO/dists/focal/Release"
 
-rm -f apt-ftparchive.conf release.conf
+rm -f apt-ftparchive.conf release.conf apt-ftparchive-deb.conf apt-ftparchive-udeb.conf
 # rm -rf /tmp/cache
