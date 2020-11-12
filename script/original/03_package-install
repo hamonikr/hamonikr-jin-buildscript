@@ -39,6 +39,9 @@ sudo apt-get install -y asbru-cm
 sudo apt install -y libglib2.0-dev cpanminus
 sudo cpanm -i Glib
 
+echo "\033[31m"'### balena-etcher-electron ###'"\033[0m"
+sudo apt-get install -y balena-etcher-electron
+
 echo "\033[31m"'### build-essential - 개발에 필요한 라이브러리 헤더파일을 가지고 있는 패키지 ###'"\033[0m"
 sudo apt-get install -y build-essential
 
@@ -116,6 +119,12 @@ sudo apt-get install -y iptraf
 echo "\033[31m"'### kdenlive - 동영상 편집 프로그램 ###'"\033[0m"
 sudo apt-get install -y kdenlive
 
+echo "\033[31m"'### kodi ###'"\033[0m"
+sudo apt-get install -y kodi
+
+echo "\033[31m"'### lutris ###'"\033[0m"
+sudo apt-get install -y lutris
+
 echo "\033[31m"'### meld ###'"\033[0m"
 sudo apt-get install -y meld
 
@@ -154,6 +163,9 @@ sudo apt-get install -y hamonikr-onboard-layout-ko
 echo "\033[31m"'### pinta ###'"\033[0m"
 sudo apt-get install -y pinta
 
+echo "\033[31m"'### playonlinux ###'"\033[0m"
+sudo apt-get install -y playonlinux
+
 echo "\033[31m"'### putty ###'"\033[0m"
 sudo apt-get install -y putty
 
@@ -180,6 +192,9 @@ sudo apt-get install -y simplescreenrecorder
 echo "\033[31m"'### stacer ###'"\033[0m"
 sudo apt-get install -y stacer
 
+echo "\033[31m"'### steam ###'"\033[0m"
+sudo apt-get install -y steam
+
 echo "\033[31m"'### software-properties-common ###'"\033[0m"
 sudo apt-get install -y software-properties-common
 
@@ -191,6 +206,12 @@ sudo apt-get install -y vim
 
 echo "\033[31m"'### vlc 미디어 플레이어 ###'"\033[0m"
 sudo apt-get install -y vlc
+
+echo "\033[31m"'### wine ###'"\033[0m"
+sudo apt-get install -y wine
+
+echo "\033[31m"'### wine-development ###'"\033[0m"
+sudo apt-get install -y wine-development
 
 echo "\033[31m"'### xclip ###'"\033[0m"
 sudo apt-get install -y xclip
@@ -226,7 +247,3 @@ sudo apt-get install -y slack-desktop
 
 echo "\033[31m"'### teams ###'"\033[0m"
 sudo apt-get install -y teams
-
-
-
-
