@@ -20,8 +20,8 @@ sudo apt-get install -y language-pack-gnome-ko-base
 sudo apt-get install -y libreoffice-l10n-ko
 sudo apt-get install -y libreoffice-help-ko
 sudo apt-get install -y firefox-locale-ko
-sudo apt-get install -y thunderbird-locale-ko
-sudo apt-get install -y gimp-help-ko
+#sudo apt-get install -y thunderbird-locale-ko
+#sudo apt-get install -y gimp-help-ko
 sudo apt-get install -y hunspell-ko
 
 
@@ -39,14 +39,14 @@ sudo apt-get install -y asbru-cm
 sudo apt install -y libglib2.0-dev cpanminus
 sudo cpanm -i Glib
 
-echo "\033[31m"'### balena-etcher-electron ###'"\033[0m"
-sudo apt-get install -y balena-etcher-electron
+#echo "\033[31m"'### balena-etcher-electron ###'"\033[0m"
+#sudo apt-get install -y balena-etcher-electron
 
-echo "\033[31m"'### build-essential - 개발에 필요한 라이브러리 헤더파일을 가지고 있는 패키지 ###'"\033[0m"
-sudo apt-get install -y build-essential
+#echo "\033[31m"'### build-essential - 개발에 필요한 라이브러리 헤더파일을 가지고 있는 패키지 ###'"\033[0m"
+#sudo apt-get install -y build-essential
 
-echo "\033[31m"'### boot-repair - 부트 영역이 손상되어 부팅이 되지 않을 때 복구 해주는 패키지 ###'"\033[0m"
-sudo apt-get install -y boot-repair
+#echo "\033[31m"'### boot-repair - 부트 영역이 손상되어 부팅이 되지 않을 때 복구 해주는 패키지 ###'"\033[0m"
+#sudo apt-get install -y boot-repair
 
 echo "\033[31m"'### clam - 안티 바이러스 패키지 ###'"\033[0m"
 sudo apt-get install -y clamav-daemon clamav-freshclam clamav clamtk
@@ -54,8 +54,8 @@ sudo apt-get install -y clamav-daemon clamav-freshclam clamav clamtk
 echo "\033[31m"'### visual studio code ###'"\033[0m"
 sudo apt-get install -y code
 
-echo "\033[31m"'### default-jdk ###'"\033[0m"
-sudo apt-get install -y default-jdk
+#echo "\033[31m"'### default-jdk ###'"\033[0m"
+#sudo apt-get install -y default-jdk
 
 # echo "\033[31m"'### docker ###'"\033[0m"
 # sudo apt-get install -y docker-ce \
@@ -80,14 +80,14 @@ sudo apt-get install -y figlet
 echo "\033[31m"'### filezilla - ftp 소프트웨어 ###'"\033[0m"
 sudo apt-get install -y filezilla
 
-echo "\033[31m"'### freeplane - 마인드맵 프로그램 ###'"\033[0m"
-sudo apt-get install -y freeplane
+#echo "\033[31m"'### freeplane - 마인드맵 프로그램 ###'"\033[0m"
+#sudo apt-get install -y freeplane
 
-echo "\033[31m"'### geany - 편집기 ###'"\033[0m"
-sudo apt-get install -y geany
+#echo "\033[31m"'### geany - 편집기 ###'"\033[0m"
+#sudo apt-get install -y geany
 
-echo "\033[31m"'### gimp ###'"\033[0m"
-sudo apt-get install -y gimp
+#echo "\033[31m"'### gimp ###'"\033[0m"
+#sudo apt-get install -y gimp
 
 echo "\033[31m"'### git ###'"\033[0m"
 sudo apt-get install -y git
@@ -95,14 +95,14 @@ sudo apt-get install -y git
 echo "\033[31m"'### git-lfs - 대용량 파일 버전 관리 ###'"\033[0m"
 sudo apt-get install -y git-lfs
 
-echo "\033[31m"'### github-desktop - 깃허브 데스크탑 ###'"\033[0m"
-sudo apt-get install -y github-desktop
+#echo "\033[31m"'### github-desktop - 깃허브 데스크탑 ###'"\033[0m"
+#sudo apt-get install -y github-desktop
 
 echo "\033[31m"'### gnupg-agent ###'"\033[0m"
 sudo apt-get install -y gnupg-agent
 
-echo "\033[31m"'### golang - Go언어 ###'"\033[0m"
-sudo apt-get install -y golang
+#echo "\033[31m"'### golang - Go언어 ###'"\033[0m"
+#sudo apt-get install -y golang
 
 echo "\033[31m"'### hamonikr-ff - 쉬운 터미널 검색, 편집 프로그램 ###'"\033[0m"
 sudo apt-get install -y hamonikr-ff
@@ -125,8 +125,8 @@ sudo apt-get install -y kodi
 echo "\033[31m"'### lutris ###'"\033[0m"
 sudo apt-get install -y lutris
 
-echo "\033[31m"'### meld ###'"\033[0m"
-sudo apt-get install -y meld
+#echo "\033[31m"'### meld ###'"\033[0m"
+#sudo apt-get install -y meld
 
 echo "\033[31m"'### naver-whale ###'"\033[0m"
 sudo apt-get install -y naver-whale-stable
@@ -145,11 +145,11 @@ sudo apt-get install -y nmap
 echo "\033[31m"'### nmon ###'"\033[0m"
 sudo apt-get install -y nmon
 
-echo "\033[31m"'### nodejs - v10.19.00 ###'"\033[0m"
-sudo apt-get install -y nodejs
+#echo "\033[31m"'### nodejs - v10.19.00 ###'"\033[0m"
+#sudo apt-get install -y nodejs
 
-echo "\033[31m"'### npm ###'"\033[0m"
-sudo apt-get install -y npm
+#echo "\033[31m"'### npm ###'"\033[0m"
+#sudo apt-get install -y npm
 
 echo "\033[31m"'### numlockx ###'"\033[0m"
 sudo apt-get install -y numlockx
@@ -160,14 +160,14 @@ sudo apt-get install -y numlockx
 echo "\033[31m"'### onboard - 가상키보드 ###'"\033[0m"
 sudo apt-get install -y hamonikr-onboard-layout-ko
 
-echo "\033[31m"'### pinta ###'"\033[0m"
-sudo apt-get install -y pinta
+#echo "\033[31m"'### pinta ###'"\033[0m"
+#sudo apt-get install -y pinta
 
 echo "\033[31m"'### playonlinux ###'"\033[0m"
 sudo apt-get install -y playonlinux
 
-echo "\033[31m"'### putty ###'"\033[0m"
-sudo apt-get install -y putty
+#echo "\033[31m"'### putty ###'"\033[0m"
+#sudo apt-get install -y putty
 
 echo "\033[31m"'### pydf ###'"\033[0m"
 sudo apt-get install -y pydf
@@ -192,8 +192,8 @@ sudo apt-get install -y simplescreenrecorder
 echo "\033[31m"'### stacer ###'"\033[0m"
 sudo apt-get install -y stacer
 
-echo "\033[31m"'### steam ###'"\033[0m"
-sudo apt-get install -y steam
+#echo "\033[31m"'### steam ###'"\033[0m"
+#sudo apt-get install -y steam
 
 echo "\033[31m"'### software-properties-common ###'"\033[0m"
 sudo apt-get install -y software-properties-common
@@ -207,11 +207,11 @@ sudo apt-get install -y vim
 echo "\033[31m"'### vlc 미디어 플레이어 ###'"\033[0m"
 sudo apt-get install -y vlc
 
-echo "\033[31m"'### wine ###'"\033[0m"
-sudo apt-get install -y wine
+#echo "\033[31m"'### wine ###'"\033[0m"
+#sudo apt-get install -y wine
 
-echo "\033[31m"'### wine-development ###'"\033[0m"
-sudo apt-get install -y wine-development
+#echo "\033[31m"'### wine-development ###'"\033[0m"
+#sudo apt-get install -y wine-development
 
 echo "\033[31m"'### xclip ###'"\033[0m"
 sudo apt-get install -y xclip
@@ -223,27 +223,27 @@ echo "\033[32m"'------------------------------------------------'"\033[0m"
 echo "\033[32m"'### pkg jin upstream 추가한 단일 패키지 파일 설치 ###'"\033[0m"
 echo "\033[32m"'------------------------------------------------'"\033[0m"
 
-#echo "\033[31m"'### 알집 ###'"\033[0m"
-# /etc폴더 제거(내용포함), 그냥은 실행이 되지 않아 /usr/local/bin/lib안에 .sh 스크립트를 만들어 컨트롤
-#sudo apt-get install -y alzip
+echo "\033[31m"'### 알집 ###'"\033[0m"
+#/etc폴더 제거(내용포함), 그냥은 실행이 되지 않아 /usr/local/bin/lib안에 .sh 스크립트를 만들어 컨트롤
+sudo apt-get install -y alzip
 
-echo "\033[31m"'### 팀업 ###'"\033[0m"
+#echo "\033[31m"'### 팀업 ###'"\033[0m"
 # control 파일의 패키지명이 대문자 > 수정하여 다시 패키징
-sudo apt-get install -y teamup
+#sudo apt-get install -y teamup
 
 
 
-echo "\033[31m"'### discord ###'"\033[0m"
-sudo apt-get install -y discord
+#echo "\033[31m"'### discord ###'"\033[0m"
+#sudo apt-get install -y discord
 
-echo "\033[31m"'### python3-multibootusb ###'"\033[0m"
-sudo apt-get install -y python3-multibootusb
+#echo "\033[31m"'### python3-multibootusb ###'"\033[0m"
+#sudo apt-get install -y python3-multibootusb
 
-echo "\033[31m"'### simplenote ###'"\033[0m"
-sudo apt-get install -y simplenote
+#echo "\033[31m"'### simplenote ###'"\033[0m"
+#sudo apt-get install -y simplenote
 
 echo "\033[31m"'### slack-desktop ###'"\033[0m"
 sudo apt-get install -y slack-desktop
 
-echo "\033[31m"'### teams ###'"\033[0m"
-sudo apt-get install -y teams
+#echo "\033[31m"'### teams ###'"\033[0m"
+#sudo apt-get install -y teams

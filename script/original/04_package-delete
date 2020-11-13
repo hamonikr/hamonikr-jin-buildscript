@@ -3,6 +3,10 @@
 # Date : 2020.10.20
 # 목적 : HamoniKR 4.0 불필요한 패키지 제거
 
+
+echo "\033[31m"'### gnote 제거 ###'"\033[0m"
+sudo apt-get -y --purge remove gnote
+
 echo "\033[31m"'### hexchat 제거 ###'"\033[0m"
 sudo apt-get -y --purge remove hexchat
 sudo apt-get -y --purge remove hexchat-common
@@ -11,6 +15,5 @@ echo "\033[31m"'### kdeconnect 제거 ###'"\033[0m"
 echo "\033[31m"'### kdenlive 설치시 자동으로 설치되며 의존관계가 없습니다. ###'"\033[0m"
 sudo apt-get -y --purge remove kdeconnect
 
-
-
-
+echo "\033[31m"'### thunderbird 제거 ###'"\033[0m"
+sudo apt-get -y --purge remove thunderbird
