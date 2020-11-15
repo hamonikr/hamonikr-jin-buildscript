@@ -207,6 +207,10 @@ sudo apt-get install -y vim
 echo "\033[31m"'### vlc 미디어 플레이어 ###'"\033[0m"
 sudo apt-get install -y vlc
 
+echo "\033[31m"'### warpinator ###'"\033[0m"
+# (upgrade가 안되서 직접 install)
+sudo apt-get install -y warpinatort
+
 #echo "\033[31m"'### wine ###'"\033[0m"
 #sudo apt-get install -y wine
 
