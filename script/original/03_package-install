@@ -122,8 +122,8 @@ sudo apt-get install -y kdenlive
 echo "\033[31m"'### kodi ###'"\033[0m"
 sudo apt-get install -y kodi
 
-echo "\033[31m"'### lutris ###'"\033[0m"
-sudo apt-get install -y lutris
+#echo "\033[31m"'### lutris ###'"\033[0m"
+#sudo apt-get install -y lutris
 
 #echo "\033[31m"'### meld ###'"\033[0m"
 #sudo apt-get install -y meld
@@ -163,8 +163,8 @@ sudo apt-get install -y hamonikr-onboard-layout-ko
 #echo "\033[31m"'### pinta ###'"\033[0m"
 #sudo apt-get install -y pinta
 
-echo "\033[31m"'### playonlinux ###'"\033[0m"
-sudo apt-get install -y playonlinux
+#echo "\033[31m"'### playonlinux ###'"\033[0m"
+#sudo apt-get install -y playonlinux
 
 #echo "\033[31m"'### putty ###'"\033[0m"
 #sudo apt-get install -y putty

@@ -17,3 +17,9 @@ sudo apt-get -y --purge remove kdeconnect
 
 echo "\033[31m"'### thunderbird 제거 ###'"\033[0m"
 sudo apt-get -y --purge remove thunderbird
+
+echo "\033[31m"'### keepassx 제거 ###'"\033[0m"
+sudo apt-get -y --purge remove keepassx
+
+echo "\033[31m"'### keepassxc 제거 ###'"\033[0m"
+sudo apt-get -y --purge remove keepassxc
