@@ -21,7 +21,7 @@ sudo apt-get install -y libreoffice-l10n-ko
 sudo apt-get install -y libreoffice-help-ko
 sudo apt-get install -y firefox-locale-ko
 #sudo apt-get install -y thunderbird-locale-ko
-#sudo apt-get install -y gimp-help-ko
+sudo apt-get install -y gimp-help-ko
 sudo apt-get install -y hunspell-ko
 
 
@@ -65,12 +65,12 @@ sudo apt-get install -y code
 #echo "\033[31m"'### docker-clean - ※패키지 파일 아님 /usr/local/bin에 있는 스크립트 파일 ###'"\033[0m"
 #curl -s https://raw.githubusercontent.com/ZZROTDesign/docker-clean/v2.0.4/docker-clean | sudo tee /usr/local/bin/docker-clean > /dev/null && sudo chmod +x /usr/local/bin/docker-clean
 
-echo "\033[31m"'### dvdauthor ###'"\033[0m"
-sudo apt-get install -y dvdauthor
+#echo "\033[31m"'### dvdauthor ###'"\033[0m"
+#sudo apt-get install -y dvdauthor
 
 echo "\033[31m"'### figlet ###'"\033[0m"
 sudo apt-get install -y figlet
-# echo 'figlet HamoniKR' >> /etc/skel/.bashrc"
+#echo 'figlet ${HOST}' >> /etc/skel/.bashrc"
 # work log for persional"
 #echo 'DEBEMAIL="hamonikr-packages@googlegroups.com"' >> /etc/skel/.bashrc
 #echo 'DEBFULLNAME="HamoniKR Team"' >> /etc/skel/.bashrc
@@ -86,8 +86,8 @@ sudo apt-get install -y filezilla
 #echo "\033[31m"'### geany - 편집기 ###'"\033[0m"
 #sudo apt-get install -y geany
 
-#echo "\033[31m"'### gimp ###'"\033[0m"
-#sudo apt-get install -y gimp
+echo "\033[31m"'### gimp ###'"\033[0m"
+sudo apt-get install -y gimp
 
 echo "\033[31m"'### git ###'"\033[0m"
 sudo apt-get install -y git
@@ -189,6 +189,9 @@ sudo apt-get install -y gnome-web-photo
 echo "\033[31m"'### simplescreenrecorder 화면녹화 ###'"\033[0m"
 sudo apt-get install -y simplescreenrecorder
 
+echo "\033[31m"'### ssh ###'"\033[0m"
+sudo apt-get install -y ssh
+
 echo "\033[31m"'### stacer ###'"\033[0m"
 sudo apt-get install -y stacer
 
@@ -197,6 +200,9 @@ sudo apt-get install -y stacer
 
 echo "\033[31m"'### software-properties-common ###'"\033[0m"
 sudo apt-get install -y software-properties-common
+
+echo "\033[31m"'### telegram ###'"\033[0m"
+sudo apt-get install -y telegram-desktop
 
 echo "\033[31m"'### tree ###'"\033[0m"
 sudo apt-get install -y tree
@@ -235,8 +241,6 @@ sudo apt-get install -y alzip
 # control 파일의 패키지명이 대문자 > 수정하여 다시 패키징
 #sudo apt-get install -y teamup
 
-
-
 #echo "\033[31m"'### discord ###'"\033[0m"
 #sudo apt-get install -y discord
 
@@ -251,3 +255,6 @@ sudo apt-get install -y slack-desktop
 
 #echo "\033[31m"'### teams ###'"\033[0m"
 #sudo apt-get install -y teams
+
+echo "\033[31m"'### zoom줌(화상)###'"\033[0m"
+sudo apt-get install -y zoom

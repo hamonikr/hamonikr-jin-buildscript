@@ -69,3 +69,6 @@ sudo apt-get install -y hamonikr-themes
 
 # 하모니카 nemo 세팅
 sudo apt-get install -y hamonikr-nemo-actions
+
+# 하모니카 카카오톡
+sudo apt-get install -y hamonikr-kakaotalk
