@@ -215,7 +215,7 @@ sudo apt-get install -y vlc
 
 echo "\033[31m"'### warpinator ###'"\033[0m"
 # (upgrade가 안되서 직접 install)
-sudo apt-get install -y warpinatort
+sudo apt-get install -y warpinator
 
 #echo "\033[31m"'### wine ###'"\033[0m"
 #sudo apt-get install -y wine
