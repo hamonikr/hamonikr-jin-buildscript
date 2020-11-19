@@ -75,12 +75,12 @@ class MintWelcome():
 
         # Action buttons
         builder.get_object("button_forums").connect("clicked", self.visit, "https://hamonikr.org")
-        builder.get_object("button_documentation").connect("clicked", self.visit, "https://hamonikr.org/index.php?mid=board_hkrsun&category=69678")
+        builder.get_object("button_documentation").connect("clicked", self.visit, "https://hamonikr.org/board_manual")
         builder.get_object("button_contribute").connect("clicked", self.visit, "https://github.com/hamonikr")
         builder.get_object("button_irc").connect("clicked", self.visit, "https://hamonikr.org/how_join")
         builder.get_object("button_codecs").connect("clicked", self.visit, "apt://mint-meta-codecs?refresh=yes")
-        builder.get_object("button_new_features").connect("clicked", self.visit, "https://pms.invesume.com/40jin")
-        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://hamonikr.org/index.php?mid=board_hkrsun&category=69682")
+        builder.get_object("button_new_features").connect("clicked", self.visit, "https://hamonikr.org/menuDownload_JIN")
+        builder.get_object("button_release_notes").connect("clicked", self.visit, "https://hamonikr.org/index.php?mid=hamoni_board&document_srl=82993")
         builder.get_object("button_mintupdate").connect("clicked", self.launch, "mintupdate")
         builder.get_object("button_mintinstall").connect("clicked", self.launch, "mintinstall")
         builder.get_object("button_timeshift").connect("clicked", self.pkexec, "timeshift-gtk")
