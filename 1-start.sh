@@ -148,12 +148,3 @@ sudo cp $WORK_PATH/custom-img/edit/boot/initrd.img-* $WORK_PATH/custom-img/extra
 
 echo "커널 변경후 casper 작업"
 sudo sh $WORK_PATH/script/original/99_casper
-
-
-###### build iso ######
-#Regenerate the manifest
-sudo chmod +w extract-cd/casper/filesystem.manifest
-sudo chroot edit dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee extract-cd/casper/filesystem.manifest
-sudo cp extract-cd/casper/filesystem.manifest extract-cd/casper/filesystem.manifest-desktop
-sudo sed -i '/ubiquity/d' extract-cd/casper/filesystem.manifest-desktop
-sudo sed -i '/casper/d' extract-cd/casper/filesystem.manifest-desktop

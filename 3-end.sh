@@ -17,6 +17,13 @@ IMAGE_NAME=$(cat $CONF | grep output_iso | awk -F 'output_iso:' '{print $2}')
 
 cd $WORK_PATH/custom-img
 
+###### build iso ######
+#Regenerate the manifest
+sudo chmod +w extract-cd/casper/filesystem.manifest
+sudo chroot edit dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee extract-cd/casper/filesystem.manifest
+sudo cp extract-cd/casper/filesystem.manifest extract-cd/casper/filesystem.manifest-desktop
+sudo sed -i '/ubiquity/d' extract-cd/casper/filesystem.manifest-desktop
+sudo sed -i '/casper/d' extract-cd/casper/filesystem.manifest-desktop
 
 
 #Compress the filesystem
@@ -31,8 +38,12 @@ printf $(sudo du -sx --block-size=1 edit | cut -f1) | sudo tee extract-cd/casper
 
 echo #"Chnage old MD5SUMS and calculate new MD5SUMS"
 cd extract-cd
-sed -i '7,$d' MD5SUMS
-find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee -a MD5SUMS
+sudo rm -f md5sum.txt 2>&1
+find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee md5sum.txt >/dev/null 2>&1
+
+# MD5SUMS 7줄 이후 삭제
+sudo sed -i '7,$d' MD5SUMS
+cat md5sum.txt >> MD5SUMS
 
 #"Create the ISO image"
 #manpage for genisoimage http://manpages.ubuntu.com/manpages/trusty/man1/genisoimage.1.html
