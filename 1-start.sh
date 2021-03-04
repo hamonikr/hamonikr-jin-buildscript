@@ -73,6 +73,14 @@ sudo cp -r $WORK_PATH/resource/* $WORK_PATH/custom-img/
 sudo cp -r $WORK_PATH/script $WORK_PATH/custom-img/edit/
 sudo mv $WORK_PATH/custom-img/deb $WORK_PATH/custom-img/edit/
 
+# edit/boot에 다음 파일이 있는지 확인(링크파일은 그대로 존재하고 있기 때문에 생성X)
+if [ ! -f $WORK_PATH/custom-img/edit/boot/vmlinuz-* ]; then
+    sudo cp -r $WORK_PATH/custom-img/extract-cd/casper/vmlinuz $WORK_PATH/custom-img/edit/boot/vmlinuz-5.4.0-26-generic
+fi
+if [ ! -f $WORK_PATH/custom-img/edit/boot/initrd.img-* ]; then
+    sudo cp -r $WORK_PATH/custom-img/extract-cd/casper/vmlinuz $WORK_PATH/custom-img/edit/boot/initrd.img-5.4.0-26-generic
+fi
+
 echo "###### chroot start ######"
 # chroot 사용하기 전 설정 (Prepare and chroot)
 sudo cp /etc/resolv.conf edit/etc/
@@ -142,7 +150,7 @@ EOF
 
 sudo umount edit/dev
 
-echo "vmlinuz-5.4.0-xx-generic 커널 casper에 복사"
+# echo "vmlinuz-5.4.0-xx-generic 커널 casper에 복사"
 sudo cp $WORK_PATH/custom-img/edit/boot/vmlinuz-* $WORK_PATH/custom-img/extract-cd/casper/vmlinuz
 sudo cp $WORK_PATH/custom-img/edit/boot/initrd.img-* $WORK_PATH/custom-img/extract-cd/casper/initrd.lz
 

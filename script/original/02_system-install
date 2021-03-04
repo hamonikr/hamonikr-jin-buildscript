@@ -31,6 +31,10 @@ sudo apt-get --purge remove -y linux-headers-5.4.0-26-generic
 sudo apt-get --purge remove -y linux-modules-5.4.0-26-generic
 sudo apt-get --purge remove -y linux-modules-extra-5.4.0-26-generic
 
+# 기존 커널 파일 제거
+sudo rm -r /boot/initrd.img-5.4.0-26-generic
+sudo rm -r /boot/vmlinuz-5.4.0-26-generic
+
 echo "\033[32m"'---------------------------------------------------'"\033[0m"
 echo "\033[32m"' 최신 커널 설치 완료 '"\033[0m"
 echo "\033[32m"' livecd 커널 변경은 chroot작업이 끝나고 이루어집니다. '"\033[0m"

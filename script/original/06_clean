@@ -17,6 +17,14 @@ sudo cp -r $chroot_after_rss/* /
 # update n clean
 sudo apt-get update
 sudo apt-get clean
+sudo rm -r /var/lib/apt/lists/* && \
+sudo rm -r /var/cache/apt/archives/* 
+
+sudo rm -rf /tmp/* ~/.bash_history \
+ && sudo cat /dev/null | tee /etc/machine-id \
+ && sudo rm /var/lib/dbus/machine-id \
+ && sudo rm /sbin/initctl \
+ && sudo dpkg-divert --rename --remove /sbin/initctl
 
 
 # delete resource directory
