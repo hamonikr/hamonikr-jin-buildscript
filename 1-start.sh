@@ -78,7 +78,7 @@ if [ ! -f $WORK_PATH/custom-img/edit/boot/vmlinuz-* ]; then
     sudo cp -r $WORK_PATH/custom-img/extract-cd/casper/vmlinuz $WORK_PATH/custom-img/edit/boot/vmlinuz-5.4.0-26-generic
 fi
 if [ ! -f $WORK_PATH/custom-img/edit/boot/initrd.img-* ]; then
-    sudo cp -r $WORK_PATH/custom-img/extract-cd/casper/vmlinuz $WORK_PATH/custom-img/edit/boot/initrd.img-5.4.0-26-generic
+    sudo cp -r $WORK_PATH/custom-img/extract-cd/casper/initrd.lz $WORK_PATH/custom-img/edit/boot/initrd.img-5.4.0-26-generic
 fi
 
 echo "###### chroot start ######"
